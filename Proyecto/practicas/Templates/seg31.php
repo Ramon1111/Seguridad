@@ -11,7 +11,8 @@
 		SESSION_START();
 		if(isset($_SESSION['numeroe']))
 		{
-			echo '<form method="GET" action="seg3.php">
+			echo '<h1>Práctica 4</h1>
+			<form method="GET" action="../programs/seg3.php">
 				Cadena: <input type="text" maxlength="9" name="cad"/><br/>
 				Llave: <input type="text" maxlength="9" name="llave"/><br/>
 				<select name="cod">
@@ -20,7 +21,7 @@
 				</select><br/>
 				<input type="submit" value="enviar"/>
 			</form>
-			<a href="./ingreso.php">Regresar.</a>';
+			<a href="../inicio/ingreso.php">Regresar.</a>';
 		}
 		?>
 	</body>

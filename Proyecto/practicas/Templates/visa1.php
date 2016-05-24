@@ -10,11 +10,11 @@
 			if(isset($_SESSION['numeroe']))
 			{
 				echo '<h1>Validación de VISA.</h1>
-				<form method="POST" action="visa.php">
+				<form method="POST" action="../programs/visa.php">
 					Número de la tarjeta: <input type="text" maxlength="16" name="num"/>
 					<input type="submit"/>
 				</form>
-				<a href="./ingreso.php">Regresar.</a>';
+				<a href="../inicio/ingreso.php">Regresar.</a>';
 			}
 		?>
 	</body>

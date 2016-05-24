@@ -11,7 +11,8 @@
 		SESSION_START();
 		if(isset($_SESSION['numeroe']))
 		{
-			echo 'Texto: <input type="text" maxlength="50" size="40" id="text"/><br/>
+			echo '<h1>Práctica 2</h1>
+			Texto: <input type="text" maxlength="50" size="40" id="text"/><br/>
 			Número: <input type="text" maxlength="40" size="40" id="num"/><br/>
 			<select id="cod">
 				<option value="c">Codificar</option>
@@ -19,7 +20,7 @@
 			</select><br/>
 			<button type="button" id="but">Enviar</button>
 			<div id="res"></div>
-			<a href="./ingreso.php">Regresar.</a>';
+			<a href="../inicio/ingreso.php">Regresar.</a>';
 		}
 		?>
 			<script type="text/javascript" src="./jquery.js"></script>

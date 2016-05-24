@@ -3,7 +3,7 @@ $("#but").click(function(){
 });
 function val(t,n,c){
 	$.ajax({
-		url:"./seg1.php",
+		url:"../programs/seg1.php",
 		data:{
 			tex:t,
 			num:n,

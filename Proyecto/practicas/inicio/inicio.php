@@ -14,6 +14,7 @@
 			SESSION_START();
 			SESSION_UNSET();
 			SESSION_DESTROY();
+			setcookie('entrada',10,time()+86400,'/');
 		?>
 		<h1>Inicio de sesión.</h1>
 		<form method="POST" action="./ingreso.php">

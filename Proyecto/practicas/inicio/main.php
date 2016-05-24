@@ -23,18 +23,12 @@
 					}
 					else
 					{
-						
-						
 						htmlspecialchars($_POST['nom']);
 						htmlspecialchars($_POST['usu']);
 						htmlspecialchars($_POST['con']);
 						mysqli_real_escape_string($enlace,$_POST['nom']);
 						mysqli_real_escape_string($enlace,$_POST['usu']);
 						mysqli_real_escape_string($enlace,$_POST['con']);
-						
-						
-						
-						
 						$con=$_POST['con'];
 						$ch=str_split($con);
 						$cade="";
@@ -50,51 +44,41 @@
 							$cade=$cade.chr($wi);
 						}
 						
-							$cad=array();
-							$arreglo=array();
-							$cont=strlen($con);
-							for($i=0;$i<$cont;$i++)
-							{
-								$car=substr($con,$i,1);
-								array_push($cad,$car);
-							}
-							$mul=ceil($cont/5);
-							$contadorpal=0;
-							for($x=0;$x<$mul;$x++)
-							{
-								$eje=array();
-								for($y=0;$y<5;$y++)
-								{
-									if($contadorpal<$cont)
-										array_push($eje,$cad[$y]);
-									else
-										array_push($eje,'');
-									$contadorpal++;
-								}
-								array_push($arreglo,$eje);
-								for($g=0;$g<5;$g++)
-									if($cad!='\0')
-										array_shift($cad);
-							}
-							$grr=array();
+						$cad=array();
+						$arreglo=array();
+						$cont=strlen($con);
+						for($i=0;$i<$cont;$i++)
+						{
+							$car=substr($con,$i,1);
+							array_push($cad,$car);
+						}
+						$mul=ceil($cont/5);
+						$contadorpal=0;
+						for($x=0;$x<$mul;$x++)
+						{
+							$eje=array();
 							for($y=0;$y<5;$y++)
-								for($x=0;$x<$mul;$x++)
-									array_push($grr,$arreglo[$x][$y]);
-							$grr=implode("",$grr);
+							{
+								if($contadorpal<$cont)
+									array_push($eje,$cad[$y]);
+								else
+									array_push($eje,'');
+								$contadorpal++;
+							}
+							array_push($arreglo,$eje);
+							for($g=0;$g<5;$g++)
+								if($cad!='\0')
+									array_shift($cad);
+						}
+						$grr=array();
+						for($y=0;$y<5;$y++)
+							for($x=0;$x<$mul;$x++)
+								array_push($grr,$arreglo[$x][$y]);
+						$grr=implode("",$grr);
 
-							$h='Texto: '.$con.'<br/>playfair("'.$grr.'",5)';
-							$cant=ceil(strlen($grr)/2);
-							$cade=$cade.substr($grr,0,$cant);
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
+						$h='Texto: '.$con.'<br/>playfair("'.$grr.'",5)';
+						$cant=ceil(strlen($grr)/2);
+						$cade=$cade.substr($grr,0,$cant);
 						$tildes = $enlace->query("SET NAMES 'utf8'");
 						$consulta='SELECT * FROM usuarios WHERE nom_usuario="'.$_POST['usu'].'"';
 						$res=mysqli_query($enlace, $consulta);

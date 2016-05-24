@@ -15,7 +15,7 @@
 				Año de nacimiento: <input type="text" maxlength="4" size="4" name="anio"/><br/>
 				<input type="submit"/>
 			</form>
-			<a href="./ingreso.php">Regresar.</a>';
+			<a href="../inicio/ingreso.php">Regresar.</a>';
 		}
 		?>
 	</body>
