@@ -7,17 +7,21 @@
 		<title>Seg 9</title>
 	</head>
 	<body>
-	<?php
-		SESSION_START();
-		if(isset($_SESSION['numeroe']))
-		{
-			echo '<h1>Práctica 9</h1>
-		<form method="GET" action="../programs/seg9.php">
-			Cadena: <input type="text" autofocus name="cad"/>
-			<input type="submit" value="Perder"/>
-		</form>
-		<a href="../inicio/ingreso.php">Regresar.</a>';
-		}
+		<?php
+			SESSION_START();
+			if(isset($_SESSION['numeroe']))
+			{
+				echo '<h1>Práctica 9</h1>
+				<form method="GET" action="../programs/seg9.php">
+					Cadena: <input type="text" autofocus name="cad"/>
+					<select name="isbn">
+						<option value="d">ISBN-10</option>
+						<option value="t">ISBN-13</option>
+					</select><br/>
+					<input type="submit" value="Comprobar"/>
+				</form>
+				<a href="../inicio/ingreso.php">Regresar.</a>';
+			}
 		?>
 	</body>
 </html>
