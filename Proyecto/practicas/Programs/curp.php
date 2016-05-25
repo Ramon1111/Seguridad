@@ -1,16 +1,16 @@
 <?php
-if(isset($_POST['num'])&&isset($_POST['anio']))
+if(isset($_POST['num']))
 {
 	$num=$_POST['num'];
-	$anio=$_POST['anio'];
+	$anio=substr($num,4,2);
 	$num=strtoupper($num);
 	$arre=str_split($num);
 	$long1=strlen($num);
 	$long2=strlen($anio);
 	echo $num.'<br/>';
-	if($long1==18&&$long2==4&&preg_match('/^[0-9]{4}$/',$anio))
+	if($long1==18&&$long2==2&&preg_match('/^[0-9]{2}$/',$anio))
 	{
-		if($anio<2000)
+		if($anio>16)
 			$select='0';
 		else
 			$select='A';

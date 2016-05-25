@@ -10,9 +10,8 @@
 		if(isset($_SESSION['numeroe']))
 		{
 			echo '<h1>Validación de CURP.</h1>
-			<form method="POST" action="curp.php">
+			<form method="POST" action="../Programs/curp.php">
 				CURP: <input type="text" maxlength="18" name="num"/><br/>
-				Año de nacimiento: <input type="text" maxlength="4" size="4" name="anio"/><br/>
 				<input type="submit"/>
 			</form>
 			<a href="../inicio/ingreso.php">Regresar.</a>';
